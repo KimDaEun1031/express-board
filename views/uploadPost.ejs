@@ -1,0 +1,52 @@
+<%-include('./includes/header.ejs') %>
+  <div class="upload-post">
+    <h1>게시물 등록</h1>
+    <div class="upload-post-header">
+      <button
+        class="back-btn"
+        onclick="location.href='/board'"
+      >
+        돌아가기
+      </button>
+    </div>
+    <form
+      action="/board/newpost"
+      method="post"
+      class="upload-post-form"
+    >
+      <div class="upload-post-form-header">
+        <input
+          type="text"
+          name="board_title"
+          id="upload-post-title"
+          placeholder="title"
+          value=""
+          required
+        />
+        <input
+          type="text"
+          name="author_name"
+          id="upload-post-name"
+          placeholder="name"
+          value=""
+          required
+        />
+      </div>
+      <div class="upload-post-form-contents">
+        <textarea
+          name="board_content"
+          id="upload-post-content"
+          maxlength="1200"
+          value=""
+          required
+        ></textarea>
+      </div>
+      <button
+        type="submit"
+        class="submit-btn"
+      >
+        등록
+      </button>
+    </form>
+  </div>
+<%-include('./includes/footer.ejs') %>

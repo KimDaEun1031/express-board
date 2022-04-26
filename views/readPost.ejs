@@ -1,0 +1,45 @@
+<%-include('./includes/header.ejs') %>
+  <div class="read-post">
+    <h1>게시물</h1>
+    <div class="read-post-header">
+      <button
+        class="back-btn"
+        onclick="location.href='/board'"
+      >
+        돌아가기
+      </button>
+      <button
+        class="delete-btn"
+        onclick="location.href='/board/post/deletepost/<%=post._id%>'"
+      >
+        삭제
+      </button>
+      <button
+        class="update-btn"
+        onclick="location.href='/board/post/newpost/<%=post._id%>'"
+      >
+        수정
+      </button>
+    </div>
+    <div class="read-post-contents">
+      <div class="read-post-contents-header">
+        <h2 class="read-post-title">
+          <%=post.board_title%>
+        </h2>
+        <div class="line"></div>
+        <div class="author-profile">
+          <span class="author-icon">
+            <p><%=post.author_name[0]%></p>
+          </span>
+          <span class="author-name">
+            <%=post.author_name%>
+          </span>
+        </div>
+      </div>
+      <textarea
+        class="read-post-content"
+        readonly
+      ><%=post.board_content%></textarea>
+    </div>
+  </div>
+<%-include('./includes/footer.ejs') %>

@@ -1,0 +1,332 @@
+/* font */
+
+@font-face {
+  font-family: 'KOTRAHOPE';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/* board css */
+
+.board {
+  width: 1100px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.board .board-header {
+  height: 30px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: bisque;
+}
+
+.board .board-header .upload-post-btn {
+  width: 100px;
+  height: 100%;
+  margin-left: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(44, 44, 44, 0.2);
+  background-color: white;
+}
+
+.board .board-header .upload-post-btn:active {
+  box-shadow: 0 0 0 rgba(44, 44, 44, 0);
+}
+
+.board .board-posts {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 200px 200px 200px;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.board .board-posts .board-post {
+  border: 1px solid rgba(44, 44, 44, 0.2);
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(44, 44, 44, 0.2);
+}
+
+.board .board-posts .board-post .board-post-link {
+  display: block;
+  position: relative;
+  padding: 10px;
+  height: 90%;
+}
+
+.board .board-posts .board-post .board-post-link .board-title-container .line {
+  border: 3px solid rgba(207, 0, 0, 0.5);
+  margin-right: 10px;
+}
+
+.board .board-posts .board-post .board-post-link .board-title-container {
+  display: flex;
+}
+
+.board .board-posts .board-post .board-post-link .board-title-container .board-title {
+  font-size: 28px;
+  font-family: 'KOTRAHOPE';
+  color: rgb(48, 48, 48);
+
+  display: -webkit-box;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.board .board-posts .board-post .board-post-link .author-name {
+  margin-top: 3px;
+  font-size: 14px;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  color: rgba(54, 54, 54, 0.9);
+}
+
+.board .board-posts .board-post .board-post-link .board-content {
+  margin: 12px 0;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 150%;
+  color: rgba(54, 54, 54, 0.6);
+
+  display: -webkit-box;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.board .board-posts .board-post .board-post-link .board-date {
+  position: absolute;
+  bottom: 0;
+  padding-top: 22px;
+  font-size: 18px;
+  font-family: 'KOTRAHOPE';
+  color: rgba(54, 54, 54, 0.8);
+}
+
+/* uploadPost css */
+
+.upload-post {
+  width: 1100px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.upload-post .upload-post-header {
+  height: 30px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: bisque;
+}
+
+.upload-post .upload-post-header .back-btn {
+  margin-left: 10px;
+  width: 100px;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(44, 44, 44, 0.2);
+  background-color: white;
+}
+
+.upload-post .upload-post-form {
+  padding: 10px;
+  border: 2px solid rgba(44, 44, 44, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.upload-post .upload-post-form .upload-post-form-header {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.upload-post .upload-post-form .upload-post-form-header #upload-post-title {
+  width: 75%;
+  font-size: 20px;
+  border: 2px solid rgba(44, 44, 44, 0.2);
+}
+
+.upload-post .upload-post-form .upload-post-form-header #upload-post-name {
+  width: 150px;
+  font-size: 14px;
+  border: 2px solid rgba(44, 44, 44, 0.2);
+  text-align: right;
+}
+
+.upload-post .upload-post-form .upload-post-form-contents #upload-post-content {
+  width: 97%;
+  height: 400px;
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 24px;
+  font-family: arial;
+  border-radius: 10px;
+  border: 2px solid rgba(44, 44, 44, 0.2);
+}
+
+.upload-post .upload-post-form .submit-btn {
+  margin-top: 10px;
+  font-size: 20px;
+  border: 2px solid rgba(44, 44, 44, 0.2);
+  background-color: white;
+}
+
+/* readPost css */
+
+.read-post {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.read-post .read-post-header {
+  height: 30px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: bisque;
+}
+
+.read-post .read-post-header .back-btn,
+.read-post .read-post-header .delete-btn,
+.read-post .read-post-header .update-btn {
+  margin-left: 10px;
+  width: 100px;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(44, 44, 44, 0.2);
+  background-color: white;
+}
+
+.read-post .read-post-contents .read-post-contents-header .read-post-title {
+  font-size: 28px;
+  padding-bottom: 10px;
+  color: rgb(48, 48, 48);
+}
+
+.read-post .read-post-contents .read-post-contents-header .line {
+  border: 1px solid rgba(44, 44, 44, 0.2);
+  margin-bottom: 10px;
+}
+
+.read-post .read-post-contents .read-post-contents-header .author-profile {
+  display: flex;
+  font-weight: bold;
+  color: rgba(54, 54, 54, 0.5);
+}
+
+.read-post .read-post-contents .read-post-contents-header .author-profile .author-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 28px;
+  border-radius: 50px;
+  background-color: rgba(207, 0, 0, 0.5);
+  color: white;
+}
+
+.read-post .read-post-contents .read-post-contents-header .author-profile .author-icon p {
+  display: table-cell;
+  margin: 0;
+  width: 50px;
+  height: 46px;
+  vertical-align: middle;
+}
+
+.read-post .read-post-contents .read-post-content {
+  width: 90%;
+  margin: 0 0 0 60px;
+  font-weight: bold;
+  border-radius: 10px;
+  color: rgba(54, 54, 54, 0.8);
+}
+
+/* upatePost css */
+
+.update-post {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.update-post .update-post-header {
+  height: 30px;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: bisque;
+}
+
+.update-post .update-post-header .back-btn {
+  margin-left: 10px;
+  width: 100px;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(44, 44, 44, 0.2);
+  background-color: white;
+}
+
+.update-post .update-post-form {
+  width: 97%;
+  padding: 10px;
+  border: 2px solid rgba(44, 44, 44, 0.2);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.update-post .update-post-form .update-post-form-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.update-post .update-post-form .update-post-form-header #update-post-title {
+  width: 75%;
+  font-size: 20px;
+  border: 2px solid rgba(44, 44, 44, 0.2);
+}
+
+.update-post .update-post-form .update-post-form-header .update-post-name {
+  width: 150px;
+  padding: 5px 10px 0 10px;
+  border: 2px solid rgba(44, 44, 44, 0.2);
+  border-radius: 50px;
+  font-size: 14px;
+  text-align: right;
+}
+
+.update-post .update-post-form #update-post-content {
+  width: 97%;
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 24px;
+  font-family: arial;
+  border-radius: 10px;
+  border: 2px solid rgba(44, 44, 44, 0.2);
+}
+
+.update-post .update-post-form .submit-btn {
+  margin-top: 5px;
+  font-size: 14px;
+  border: 2px solid rgba(44, 44, 44, 0.2);
+  background-color: white;
+}

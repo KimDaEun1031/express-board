@@ -1,0 +1,50 @@
+<%-include('./includes/header.ejs') %>
+  <div class="board">
+    <h1>게시판 목록</h1>
+    <div class="board-header">
+      <button
+        class="upload-post-btn"
+        onclick="location.href='/board/newpost'"
+      >
+        등록
+      </button>
+    </div>
+    <ul class="board-posts">
+      <%
+        for(var i=0; i<posts.length; i++)
+        {
+            let data = posts[i];
+            let createDate = new Date(data.createdAt).getTime();
+            let updateDate = new Date(data.updatedAt).getTime();
+            let date = new Date(data.createdAt).toISOString().substring(0, 10);
+
+            if (createDate < updateDate) {
+              date = new Date(data.updatedAt).toISOString().substring(0, 10);
+            }
+        %>
+          <li class='board-post'>
+            <a
+              href="/board/post/<%=data._id%>"
+              class="board-post-link"
+            >
+              <div class="board-title-container">
+                <div class="line"></div>
+                <div class="board-title">
+                  <%=data.board_title%>
+                </div>
+              </div>
+              <p class="author-name">
+                <%=data.author_name%>
+              </p>
+              <p class="board-content">
+                <%=data.board_content%>
+              </p>
+              <p class="board-date">
+                <%=date%>
+              </p>
+            </a>
+          </li>
+      <%}%>
+    </ul>
+  </div>
+<%-include('./includes/footer.ejs') %>
